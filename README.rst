@@ -1,7 +1,7 @@
 Pygments Fabric Lexer
 ========================
 
-Test like this:
+Test like this::
 
         virtualenv .
         bin/activate
