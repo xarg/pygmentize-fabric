@@ -1,0 +1,397 @@
+[web2] Executing task 'zope_instance.deploy'
+[web3] Executing task 'zope_instance.deploy'
+[web2] Executing task 'update_repo'
+[web2] Executing task 'update_repo'
+[web2] run: git status
+[web2] run: git status
+[web2] Passphrase for private key: [web2] Passphrase for private key: 
+[web2] Login password for 'alex': 
+[web2] out: # On branch master
+[web2] out: # Your branch is ahead of 'origin/master' by 6 commits.
+[web2] out: #
+[web2] out: nothing to commit (working directory clean)
+
+[web2] run: git pull origin master
+[web2] out: From git.github.com:my_repo
+[web2] out:  * branch            master     -> FETCH_HEAD
+[web2] out: Already up-to-date.
+
+[web3] Executing task 'update_repo'
+[web3] run: git status
+[web3] out: # On branch master
+[web3] out: nothing to commit (working directory clean)
+
+[web3] run: git pull origin master
+[web3] out: From git.github.com:my_repo
+[web3] out:  * branch            master     -> FETCH_HEAD
+[web3] out: Updating 51a3532..f1f6d62
+[web3] out: Fast-forward
+[web3] out:  xxxxxxxxxx/xxxxxxxxx.py                            |  399 +++++++++++++++++++-
+[web3] out:  xxxxxxxxxx/xxxxxxxxxxx/xxxxxxxxxxx.html            |    2 +-
+[web3] out:  xxxxxxxxxx/xxxxxxxxxxx/xxxxxxxxxxxxxxxxxx.zpt      |   26 +-
+[web3] out:  .../xxxxx/xxxxxxxxx/xxxxxxxxxxxxxxxxxxxxxxxxx.html |    2 +-
+[web3] out:  .../xxxxx/xxxxxxxxx/xxxxxxxxxxxxxxxxxxx.html       |    2 +-
+[web3] out:  .../xxxxxxxx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.html   |    2 +-
+[web3] out:  doc/deployment/fabric/xxxxx.py                     |   27 ++
+[web3] out:  doc/deployment/fabric/xxxxxxxxxxxxx.py             |    4 +-
+[web3] out:  xxxxxx/xx.py                                       |    3 +
+[web3] out:  xxxxxx/xxxxxxxxxxxxxxx.py                          |    5 +
+[web3] out:  xxxxxxxx/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.py   |   90 ++++-
+[web3] out:  xxxxxxx/xxxxxxxxxxx.py                             |   22 +-
+[web3] out:  xxxxxxxxxxxxxxxx.py                                |    9 +-
+[web3] out:  xxxxxxxxxxxxxxxxxxxxxxxxxx.py                      |    8 +-
+[web3] out:  14 files changed, 565 insertions(+), 36 deletions(-)
+
+[web2] Executing task 'install'
+
+Warning: Directory exists: ~/plone_buildout
+
+[web2] Executing task 'clean_buildout'
+[web2] run: rm -f $(find -maxdepth 1 -type l)
+[web3] Executing task 'clean_buildout'
+[web3] run: rm -f $(find -maxdepth 1 -type l)
+[web2] run: ln -s ~/my_repo/doc/buildout/* .
+[web2] run: ln -s buildout-instances-prod.cfg buildout.cfg
+[web2] run: python bootstrap.py
+[web2] run: bin/buildout
+[web2] out: mr.developer: Queued 'zope_products' for checkout.
+[web2] out: mr.developer: Updated 'zope_products' with git.
+[web2] out: Develop: '/home/alex/plone_buildout/../my_repo/ploneweb'
+[web2] out: Develop: '/home/alex/plone_buildout/src/zope_products'
+[web2] out: Updating _mr.developer.
+[web2] out: Updating zi1.
+[web2] out: Updating zi2.
+[web2] out: Updating zope-extensions.
+
+[web3] Executing task 'install'
+
+Warning: Directory exists: ~/plone_buildout
+
+[web2] Executing task 'clean_buildout'
+[web2] run: rm -f $(find -maxdepth 1 -type l)
+[web3] Executing task 'clean_buildout'
+[web3] run: rm -f $(find -maxdepth 1 -type l)
+[web3] run: ln -s ~/my_repo/doc/buildout/* .
+[web3] run: ln -s buildout-instances-prod.cfg buildout.cfg
+[web3] run: python bootstrap.py
+[web3] run: bin/buildout
+[web3] out: mr.developer: Queued 'zope_products' for checkout.
+[web3] out: mr.developer: Updated 'zope_products' with git.
+[web3] out: Develop: '/home/alex/plone_buildout/../my_repo/ploneweb'
+[web3] out: Develop: '/home/alex/plone_buildout/src/zope_products'
+[web3] out: Updating _mr.developer.
+[web3] out: Installing zi1.
+[web3] out: Getting distribution for 'MySQL-python==1.2.3c1'.
+[web3] out: _mysql.c:36:23: error: my_config.h: No such file or directory
+[web3] out: _mysql.c:38:19: error: mysql.h: No such file or directory
+[web3] out: _mysql.c:39:26: error: mysqld_error.h: No such file or directory
+[web3] out: _mysql.c:40:20: error: errmsg.h: No such file or directory
+[web3] out: _mysql.c:76: error: expected specifier-qualifier-list before ‘MYSQL’
+[web3] out: _mysql.c:90: error: expected specifier-qualifier-list before ‘MYSQL_RES’
+[web3] out: _mysql.c: In function ‘_mysql_Exception’:
+[web3] out: _mysql.c:120: warning: implicit declaration of function ‘mysql_errno’
+[web3] out: _mysql.c:120: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:123: error: ‘CR_MAX_ERROR’ undeclared (first use in this function)
+[web3] out: _mysql.c:123: error: (Each undeclared identifier is reported only once
+[web3] out: _mysql.c:123: error: for each function it appears in.)
+[web3] out: _mysql.c:131: error: ‘CR_COMMANDS_OUT_OF_SYNC’ undeclared (first use in this function)
+[web3] out: _mysql.c:132: error: ‘ER_DB_CREATE_EXISTS’ undeclared (first use in this function)
+[web3] out: _mysql.c:133: error: ‘ER_SYNTAX_ERROR’ undeclared (first use in this function)
+[web3] out: _mysql.c:134: error: ‘ER_PARSE_ERROR’ undeclared (first use in this function)
+[web3] out: _mysql.c:135: error: ‘ER_NO_SUCH_TABLE’ undeclared (first use in this function)
+[web3] out: _mysql.c:136: error: ‘ER_WRONG_DB_NAME’ undeclared (first use in this function)
+[web3] out: _mysql.c:137: error: ‘ER_WRONG_TABLE_NAME’ undeclared (first use in this function)
+[web3] out: _mysql.c:138: error: ‘ER_FIELD_SPECIFIED_TWICE’ undeclared (first use in this function)
+[web3] out: _mysql.c:139: error: ‘ER_INVALID_GROUP_FUNC_USE’ undeclared (first use in this function)
+[web3] out: _mysql.c:140: error: ‘ER_UNSUPPORTED_EXTENSION’ undeclared (first use in this function)
+[web3] out: _mysql.c:141: error: ‘ER_TABLE_MUST_HAVE_COLUMNS’ undeclared (first use in this function)
+[web3] out: _mysql.c:170: error: ‘ER_DUP_ENTRY’ undeclared (first use in this function)
+[web3] out: _mysql.c:213: warning: implicit declaration of function ‘mysql_error’
+[web3] out: _mysql.c:213: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_server_init’:
+[web3] out: _mysql.c:308: warning: label ‘finish’ defined but not used
+[web3] out: _mysql.c:234: warning: unused variable ‘item’
+[web3] out: _mysql.c:233: warning: unused variable ‘groupc’
+[web3] out: _mysql.c:233: warning: unused variable ‘i’
+[web3] out: _mysql.c:233: warning: unused variable ‘cmd_argc’
+[web3] out: _mysql.c:232: warning: unused variable ‘s’
+[web3] out: _mysql.c: In function ‘_mysql_ResultObject_Initialize’:
+[web3] out: _mysql.c:363: error: ‘MYSQL_RES’ undeclared (first use in this function)
+[web3] out: _mysql.c:363: error: ‘result’ undeclared (first use in this function)
+[web3] out: _mysql.c:368: error: ‘MYSQL_FIELD’ undeclared (first use in this function)
+[web3] out: _mysql.c:368: error: ‘fields’ undeclared (first use in this function)
+[web3] out: _mysql.c:377: error: ‘_mysql_ResultObject’ has no member named ‘use’
+[web3] out: _mysql.c:380: warning: implicit declaration of function ‘mysql_use_result’
+[web3] out: _mysql.c:380: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:382: warning: implicit declaration of function ‘mysql_store_result’
+[web3] out: _mysql.c:382: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:383: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:386: error: ‘_mysql_ResultObject’ has no member named ‘converter’
+[web3] out: _mysql.c:389: warning: implicit declaration of function ‘mysql_num_fields’
+[web3] out: _mysql.c:390: error: ‘_mysql_ResultObject’ has no member named ‘nfields’
+[web3] out: _mysql.c:391: error: ‘_mysql_ResultObject’ has no member named ‘converter’
+[web3] out: _mysql.c:392: warning: implicit declaration of function ‘mysql_fetch_fields’
+[web3] out: _mysql.c:438: error: ‘_mysql_ResultObject’ has no member named ‘converter’
+[web3] out: _mysql.c: In function ‘_mysql_ResultObject_traverse’:
+[web3] out: _mysql.c:450: error: ‘_mysql_ResultObject’ has no member named ‘converter’
+[web3] out: _mysql.c:451: error: ‘_mysql_ResultObject’ has no member named ‘converter’
+[web3] out: _mysql.c: In function ‘_mysql_ResultObject_clear’:
+[web3] out: _mysql.c:462: error: ‘_mysql_ResultObject’ has no member named ‘converter’
+[web3] out: _mysql.c:462: error: ‘_mysql_ResultObject’ has no member named ‘converter’
+[web3] out: _mysql.c:462: error: ‘_mysql_ResultObject’ has no member named ‘converter’
+[web3] out: _mysql.c:462: error: ‘_mysql_ResultObject’ has no member named ‘converter’
+[web3] out: _mysql.c:463: error: ‘_mysql_ResultObject’ has no member named ‘converter’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_Initialize’:
+[web3] out: _mysql.c:475: error: ‘MYSQL’ undeclared (first use in this function)
+[web3] out: _mysql.c:475: error: ‘conn’ undeclared (first use in this function)
+[web3] out: _mysql.c:500: error: ‘_mysql_ConnectionObject’ has no member named ‘converter’
+[web3] out: _mysql.c:501: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:525: error: ‘_mysql_ConnectionObject’ has no member named ‘converter’
+[web3] out: _mysql.c:547: warning: implicit declaration of function ‘mysql_init’
+[web3] out: _mysql.c:547: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:550: warning: implicit declaration of function ‘mysql_options’
+[web3] out: _mysql.c:550: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:550: error: ‘MYSQL_OPT_CONNECT_TIMEOUT’ undeclared (first use in this function)
+[web3] out: _mysql.c:554: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:554: error: ‘MYSQL_OPT_COMPRESS’ undeclared (first use in this function)
+[web3] out: _mysql.c:555: error: ‘CLIENT_COMPRESS’ undeclared (first use in this function)
+[web3] out: _mysql.c:558: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:558: error: ‘MYSQL_OPT_NAMED_PIPE’ undeclared (first use in this function)
+[web3] out: _mysql.c:560: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:560: error: ‘MYSQL_INIT_COMMAND’ undeclared (first use in this function)
+[web3] out: _mysql.c:562: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:562: error: ‘MYSQL_READ_DEFAULT_FILE’ undeclared (first use in this function)
+[web3] out: _mysql.c:564: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:564: error: ‘MYSQL_READ_DEFAULT_GROUP’ undeclared (first use in this function)
+[web3] out: _mysql.c:567: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:567: error: ‘MYSQL_OPT_LOCAL_INFILE’ undeclared (first use in this function)
+[web3] out: _mysql.c:575: warning: implicit declaration of function ‘mysql_real_connect’
+[web3] out: _mysql.c:575: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:590: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_traverse’:
+[web3] out: _mysql.c:671: error: ‘_mysql_ConnectionObject’ has no member named ‘converter’
+[web3] out: _mysql.c:672: error: ‘_mysql_ConnectionObject’ has no member named ‘converter’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_clear’:
+[web3] out: _mysql.c:680: error: ‘_mysql_ConnectionObject’ has no member named ‘converter’
+[web3] out: _mysql.c:680: error: ‘_mysql_ConnectionObject’ has no member named ‘converter’
+[web3] out: _mysql.c:680: error: ‘_mysql_ConnectionObject’ has no member named ‘converter’
+[web3] out: _mysql.c:680: error: ‘_mysql_ConnectionObject’ has no member named ‘converter’
+[web3] out: _mysql.c:681: error: ‘_mysql_ConnectionObject’ has no member named ‘converter’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_close’:
+[web3] out: _mysql.c:696: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:698: warning: implicit declaration of function ‘mysql_close’
+[web3] out: _mysql.c:698: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:700: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_affected_rows’:
+[web3] out: _mysql.c:722: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:723: warning: implicit declaration of function ‘mysql_affected_rows’
+[web3] out: _mysql.c:723: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_debug’:
+[web3] out: _mysql.c:739: warning: implicit declaration of function ‘mysql_debug’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_dump_debug_info’:
+[web3] out: _mysql.c:757: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:759: warning: implicit declaration of function ‘mysql_dump_debug_info’
+[web3] out: _mysql.c:759: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_autocommit’:
+[web3] out: _mysql.c:783: warning: implicit declaration of function ‘mysql_query’
+[web3] out: _mysql.c:783: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_commit’:
+[web3] out: _mysql.c:806: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_rollback’:
+[web3] out: _mysql.c:828: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_errno’:
+[web3] out: _mysql.c:940: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:941: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_error’:
+[web3] out: _mysql.c:956: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:957: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_escape_string’:
+[web3] out: _mysql.c:981: warning: implicit declaration of function ‘mysql_escape_string’
+[web3] out: _mysql.c: In function ‘_mysql_escape’:
+[web3] out: _mysql.c:1088: error: ‘_mysql_ConnectionObject’ has no member named ‘converter’
+[web3] out: _mysql.c: In function ‘_mysql_ResultObject_describe’:
+[web3] out: _mysql.c:1168: error: ‘MYSQL_FIELD’ undeclared (first use in this function)
+[web3] out: _mysql.c:1168: error: ‘fields’ undeclared (first use in this function)
+[web3] out: _mysql.c:1171: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1172: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:1173: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:1184: warning: implicit declaration of function ‘IS_NOT_NULL’
+[web3] out: _mysql.c: In function ‘_mysql_ResultObject_field_flags’:
+[web3] out: _mysql.c:1204: error: ‘MYSQL_FIELD’ undeclared (first use in this function)
+[web3] out: _mysql.c:1204: error: ‘fields’ undeclared (first use in this function)
+[web3] out: _mysql.c:1207: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1208: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:1209: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c: At top level:
+[web3] out: _mysql.c:1250: error: expected declaration specifiers or ‘...’ before ‘MYSQL_ROW’
+[web3] out: _mysql.c: In function ‘_mysql_row_to_tuple’:
+[web3] out: _mysql.c:1256: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:1258: warning: implicit declaration of function ‘mysql_fetch_lengths’
+[web3] out: _mysql.c:1258: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:1261: error: ‘_mysql_ResultObject’ has no member named ‘converter’
+[web3] out: _mysql.c:1262: error: ‘row’ undeclared (first use in this function)
+[web3] out: _mysql.c: At top level:
+[web3] out: _mysql.c:1275: error: expected declaration specifiers or ‘...’ before ‘MYSQL_ROW’
+[web3] out: _mysql.c: In function ‘_mysql_row_to_dict’:
+[web3] out: _mysql.c:1280: error: ‘MYSQL_FIELD’ undeclared (first use in this function)
+[web3] out: _mysql.c:1280: error: ‘fields’ undeclared (first use in this function)
+[web3] out: _mysql.c:1282: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:1284: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:1285: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:1288: error: ‘_mysql_ResultObject’ has no member named ‘converter’
+[web3] out: _mysql.c:1289: error: ‘row’ undeclared (first use in this function)
+[web3] out: _mysql.c: At top level:
+[web3] out: _mysql.c:1314: error: expected declaration specifiers or ‘...’ before ‘MYSQL_ROW’
+[web3] out: _mysql.c: In function ‘_mysql_row_to_dict_old’:
+[web3] out: _mysql.c:1319: error: ‘MYSQL_FIELD’ undeclared (first use in this function)
+[web3] out: _mysql.c:1319: error: ‘fields’ undeclared (first use in this function)
+[web3] out: _mysql.c:1321: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:1323: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:1324: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:1327: error: ‘_mysql_ResultObject’ has no member named ‘converter’
+[web3] out: _mysql.c:1328: error: ‘row’ undeclared (first use in this function)
+[web3] out: _mysql.c: At top level:
+[web3] out: _mysql.c:1350: error: expected declaration specifiers or ‘...’ before ‘MYSQL_ROW’
+[web3] out: _mysql.c: In function ‘_mysql__fetch_row’:
+[web3] out: _mysql.c:1361: error: ‘MYSQL_ROW’ undeclared (first use in this function)
+[web3] out: _mysql.c:1361: error: expected ‘;’ before ‘row’
+[web3] out: _mysql.c:1365: error: ‘_mysql_ResultObject’ has no member named ‘use’
+[web3] out: _mysql.c:1366: error: ‘row’ undeclared (first use in this function)
+[web3] out: _mysql.c:1366: warning: implicit declaration of function ‘mysql_fetch_row’
+[web3] out: _mysql.c:1366: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:1369: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:1372: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:1380: error: too many arguments to function ‘convert_row’
+[web3] out: _mysql.c: In function ‘_mysql_ResultObject_fetch_row’:
+[web3] out: _mysql.c:1404: error: expected declaration specifiers or ‘...’ before ‘MYSQL_ROW’
+[web3] out: _mysql.c:1419: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1431: error: ‘_mysql_ResultObject’ has no member named ‘use’
+[web3] out: _mysql.c:1445: warning: implicit declaration of function ‘mysql_num_rows’
+[web3] out: _mysql.c:1445: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_character_set_name’:
+[web3] out: _mysql.c:1512: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c: In function ‘_mysql_get_client_info’:
+[web3] out: _mysql.c:1603: warning: implicit declaration of function ‘mysql_get_client_info’
+[web3] out: _mysql.c:1603: warning: passing argument 1 of ‘PyString_FromString’ makes pointer from integer without a cast
+[web3] out: /usr/include/python2.6/stringobject.h:63: note: expected ‘const char *’ but argument is of type ‘int’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_get_host_info’:
+[web3] out: _mysql.c:1617: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1618: warning: implicit declaration of function ‘mysql_get_host_info’
+[web3] out: _mysql.c:1618: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_get_proto_info’:
+[web3] out: _mysql.c:1632: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1633: warning: implicit declaration of function ‘mysql_get_proto_info’
+[web3] out: _mysql.c:1633: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_get_server_info’:
+[web3] out: _mysql.c:1647: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1648: warning: implicit declaration of function ‘mysql_get_server_info’
+[web3] out: _mysql.c:1648: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_info’:
+[web3] out: _mysql.c:1664: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1665: warning: implicit declaration of function ‘mysql_info’
+[web3] out: _mysql.c:1665: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_insert_id’:
+[web3] out: _mysql.c:1697: error: ‘my_ulonglong’ undeclared (first use in this function)
+[web3] out: _mysql.c:1697: error: expected ‘;’ before ‘r’
+[web3] out: _mysql.c:1699: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1701: error: ‘r’ undeclared (first use in this function)
+[web3] out: _mysql.c:1701: warning: implicit declaration of function ‘mysql_insert_id’
+[web3] out: _mysql.c:1701: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_kill’:
+[web3] out: _mysql.c:1718: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1720: warning: implicit declaration of function ‘mysql_kill’
+[web3] out: _mysql.c:1720: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_field_count’:
+[web3] out: _mysql.c:1739: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1741: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ResultObject_num_fields’:
+[web3] out: _mysql.c:1756: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1757: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c: In function ‘_mysql_ResultObject_num_rows’:
+[web3] out: _mysql.c:1772: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1773: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_ping’:
+[web3] out: _mysql.c:1802: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1803: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:1805: warning: implicit declaration of function ‘mysql_ping’
+[web3] out: _mysql.c:1805: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_query’:
+[web3] out: _mysql.c:1826: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1828: warning: implicit declaration of function ‘mysql_real_query’
+[web3] out: _mysql.c:1828: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_select_db’:
+[web3] out: _mysql.c:1856: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1858: warning: implicit declaration of function ‘mysql_select_db’
+[web3] out: _mysql.c:1858: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_shutdown’:
+[web3] out: _mysql.c:1877: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1879: warning: implicit declaration of function ‘mysql_shutdown’
+[web3] out: _mysql.c:1879: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_stat’:
+[web3] out: _mysql.c:1904: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1906: warning: implicit declaration of function ‘mysql_stat’
+[web3] out: _mysql.c:1906: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_store_result’:
+[web3] out: _mysql.c:1927: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1928: error: ‘_mysql_ConnectionObject’ has no member named ‘converter’
+[web3] out: _mysql.c:1937: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_thread_id’:
+[web3] out: _mysql.c:1966: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1968: warning: implicit declaration of function ‘mysql_thread_id’
+[web3] out: _mysql.c:1968: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_use_result’:
+[web3] out: _mysql.c:1988: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:1989: error: ‘_mysql_ConnectionObject’ has no member named ‘converter’
+[web3] out: _mysql.c:1998: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_dealloc’:
+[web3] out: _mysql.c:2016: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_repr’:
+[web3] out: _mysql.c:2028: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:2030: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c: In function ‘_mysql_ResultObject_data_seek’:
+[web3] out: _mysql.c:2047: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:2048: warning: implicit declaration of function ‘mysql_data_seek’
+[web3] out: _mysql.c:2048: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c: In function ‘_mysql_ResultObject_row_seek’:
+[web3] out: _mysql.c:2061: error: ‘MYSQL_ROW_OFFSET’ undeclared (first use in this function)
+[web3] out: _mysql.c:2061: error: expected ‘;’ before ‘r’
+[web3] out: _mysql.c:2063: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:2064: error: ‘_mysql_ResultObject’ has no member named ‘use’
+[web3] out: _mysql.c:2069: error: ‘r’ undeclared (first use in this function)
+[web3] out: _mysql.c:2069: warning: implicit declaration of function ‘mysql_row_tell’
+[web3] out: _mysql.c:2069: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:2070: warning: implicit declaration of function ‘mysql_row_seek’
+[web3] out: _mysql.c:2070: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c: In function ‘_mysql_ResultObject_row_tell’:
+[web3] out: _mysql.c:2082: error: ‘MYSQL_ROW_OFFSET’ undeclared (first use in this function)
+[web3] out: _mysql.c:2082: error: expected ‘;’ before ‘r’
+[web3] out: _mysql.c:2084: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:2085: error: ‘_mysql_ResultObject’ has no member named ‘use’
+[web3] out: _mysql.c:2090: error: ‘r’ undeclared (first use in this function)
+[web3] out: _mysql.c:2090: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c:2091: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c: In function ‘_mysql_ResultObject_dealloc’:
+[web3] out: _mysql.c:2099: warning: implicit declaration of function ‘mysql_free_result’
+[web3] out: _mysql.c:2099: error: ‘_mysql_ResultObject’ has no member named ‘result’
+[web3] out: _mysql.c: At top level:
+[web3] out: _mysql.c:2330: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: _mysql.c:2337: error: ‘_mysql_ConnectionObject’ has no member named ‘converter’
+[web3] out: _mysql.c:2344: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:2351: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:2358: error: ‘_mysql_ConnectionObject’ has no member named ‘connection’
+[web3] out: _mysql.c:2421: error: ‘_mysql_ResultObject’ has no member named ‘converter’
+[web3] out: _mysql.c:2421: error: initializer element is not constant
+[web3] out: _mysql.c:2421: error: (near initialization for ‘_mysql_ResultObject_memberlist[0].offset’)
+[web3] out: _mysql.c: In function ‘_mysql_ConnectionObject_getattr’:
+[web3] out: _mysql.c:2443: error: ‘_mysql_ConnectionObject’ has no member named ‘open’
+[web3] out: error: Setup script exited with error: command 'gcc' failed with exit status 1
+[web3] out: An error occured when trying to install MySQL-python 1.2.3c1. Look above this message for any errors that were output by easy_install.
+[web3] out: While:
+[web3] out:   Installing zi1.
+[web3] out:   Getting distribution for 'MySQL-python==1.2.3c1'.
+[web3] out: Error: Couldn't install: MySQL-python 1.2.3c1
+
+Fatal error: run() received nonzero return code 1 while executing!
+
+Requested: bin/buildout
+Executed: /bin/bash -l -c "cd ~/plone_buildout && bin/buildout"
